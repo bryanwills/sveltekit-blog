@@ -6,9 +6,14 @@
   import type { LayoutData } from "./$types";
   import GoogleAnalytics from "$lib/components/GoogleAnalytics.svelte";
 
-  export let data: LayoutData;
+  interface Props {
+    data: LayoutData;
+    children?: import('svelte').Snippet;
+  }
 
-  $: pagePath = data.pathname;
+  let { data, children }: Props = $props();
+
+  let pagePath = $derived(data.pathname);
 </script>
 
 <GoogleAnalytics />
@@ -21,7 +26,7 @@
       out:fly={{ y: 15, duration: 200 }}
       class="mx-auto max-w-5xl pt-24"
     >
-      <slot />
+      {@render children?.()}
     </main>
   {/key}
 </ThemeInitializer>
