@@ -10,12 +10,14 @@ You can find the source code for my config [here](https://github.com/josean-dev/
 
 I'm using [Arch Linux](https://youtu.be/TS1ghG3c3xI) & [Hyprland](https://youtu.be/PEgDssV0nW0) for this.
 
-🎥 Arch Linux Installation Guide: [Watch Now](https://youtu.be/TS1ghG3c3xI)
-🎥 Hyprland Setup Guide: [Watch Now](https://youtu.be/PEgDssV0nW0)
+- 🎥 [Arch Linux Installation Guide](https://youtu.be/TS1ghG3c3xI)
+- 🎥 [Hyprland Setup Guide](https://youtu.be/PEgDssV0nW0)
 
 ## Install yay
 
 Yay is a wrapper for pacman that allows you to install packages from the Arch User Repository.
+
+You can install it with:
 
 ```bash
 sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
